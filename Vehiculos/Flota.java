@@ -91,3 +91,14 @@ public class Flota {
         return new ArrayList<>(vehiculos);
     }
 }
+// --- EJERCICIO 4: Método específico solicitado en el parcial ---
+    public boolean agregarAuto(Auto auto) {
+        // Verifica si en la colección ya existe un auto con la misma patente
+        // Reutilizamos la lógica de Streams que ya tenías, pero específica para la consigna
+        if (this.vehiculos.stream().anyMatch(v -> v.getPatente().equalsIgnoreCase(auto.getPatente()))) {
+            return false; // Ya existe, no se agrega
+        }
+        this.vehiculos.add(auto);
+        return true; // Agregado exitosamente
+    }
+    
