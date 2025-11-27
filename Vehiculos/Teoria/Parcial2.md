@@ -94,3 +94,23 @@ Preguntas de multiple choice analizadas y corregidas.
 **Pregunta:** ¿Cuál opción es correcta para agregar a `Map<String, Double>`?
 * **Respuesta Correcta:** **d. Ninguna de las anteriores.**
 * **Explicación:** Los mapas usan el método `.put(clave, valor)`, no `.add()`.
+---
+## 📝 NUEVAS PREGUNTAS (Batch 3 - Final)
+
+### 17. Jerarquía de Excepciones
+**Pregunta:** Respecto a las excepciones en Java, podemos afirmar...
+* **Respuesta Correcta:** **d. Tanto Error como Exception son subclases directas de Throwable.**
+* **Corrección:** En la imagen seleccionaste la opción b (que dice que *todas* las subclases de Exception son comprobadas), lo cual es FALSO porque `RuntimeException` hereda de `Exception` y es *no comprobada* (unchecked). La estructura correcta es que `Throwable` es el padre de `Error` y `Exception`.
+
+### 18. Análisis de Código: "Incognita" (Conteo de Vocales)
+**Pregunta:** ¿Cuál sería la salida por consola del método `metodoIncognita("Otorrinolaringologo")`?
+* **Lógica:** El código recorre el String y tiene un `switch` que suma 1 al contador (`count`) cada vez que encuentra una vocal ('a', 'e', 'i', 'o', 'u').
+* **Conteo:**
+    * O - t - **o** - rr - **i** - n - **o** - l - **a** - r - **i** - n - g - **o** - l - **o** - g - **o**
+    * Vocales: O, o, i, o, a, i, o, o, o = **9 vocales**.
+* **Respuesta Correcta:** **9**
+
+### 19. Definición de Inmutabilidad
+**Pregunta:** Indique cuál afirmación es correcta.
+* **Respuesta Correcta:** **a. Un objeto es inmutable si su contenido o su estado no puede ser cambiado una vez que se ha creado.**
+* **Explicación:** Esta es la definición de libro. Por ejemplo, la clase `String` es inmutable. Si intentas cambiarla, en realidad se crea un objeto nuevo en memoria.
